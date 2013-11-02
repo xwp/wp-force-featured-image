@@ -38,9 +38,7 @@ class Force_Featured_Image {
 	 * @access private
 	 */
 	private static $options = array(
-		'post_types' => array(
-			'post' => array(),
-		),
+		'post_types' => array(),
 	);
 
 	/**
@@ -83,6 +81,10 @@ class Force_Featured_Image {
 	public function after_setup_theme() {
 		// Let the theme override some options
 		self::$options['post_types'] = apply_filters( 'force_featured_image_post_type', self::$options['post_types'] );
+
+		// If no post-types are specified in the options, no use to go further
+		if ( empty( self::$options['post_types'] ) )
+			return;
 
 		// Load components
 		add_filter( 'admin_post_thumbnail_html', array( $this, 'admin_post_thumbnail_html' ), 10, 2 );
@@ -154,7 +156,7 @@ class Force_Featured_Image {
 		global $post, $current_screen;
 		$msg_id = filter_input( INPUT_GET, 'force-featured-image', FILTER_SANITIZE_STRING );
 
-		if ( ! $msg_id && ! is_null( $post ) && 'post' === $current_screen->base ){
+		if ( ! $msg_id && ! is_null( $post ) && 'post' === $current_screen->base ) {
 			$this->check_featured_image_validity( $post->ID, $post->post_type );
 			$msg_id = self::$admin_message;
 		}

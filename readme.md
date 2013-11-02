@@ -4,7 +4,7 @@
 Ever wanted to force a user to publish a post with a featured image of a certain dimension? Search no more.
 
 **Contributors:** [x-team](http://profiles.wordpress.org/x-team), [jonathanbardo](http://profiles.wordpress.org/jonathanbardo)  
-**Tags:** [tinyMCE](http://wordpress.org/plugins/tags/tinyMCE), [admin](http://wordpress.org/plugins/tags/admin), [mention](http://wordpress.org/plugins/tags/mention)  
+**Tags:** [tinyMCE](http://wordpress.org/plugins/tags/tinyMCE), [admin](http://wordpress.org/plugins/tags/admin), [image](http://wordpress.org/plugins/tags/image), [featured-image](http://wordpress.org/plugins/tags/featured-image), [featured](http://wordpress.org/plugins/tags/featured)  
 **Requires at least:** 3.6  
 **Tested up to:** 3.7.1  
 **Stable tag:** trunk (master)  
@@ -13,6 +13,23 @@ Ever wanted to force a user to publish a post with a featured image of a certain
 ## Description ##
 
 **Development of this plugin is done [on GitHub](https://github.com/x-team/mentionable). Pull requests welcome. Please see [issues](https://github.com/x-team/mentionable/issues) reported there before going to the plugin forum.**
+
+## Configuration ##
+
+This plugin lets you specify which post-type requires to force a featured image to. It will also let you specify minimum dimensions for the image.`
+Let say for example you want to force a user to set an image on the default post type with the following dimensions (400px * 400px):
+
+```php
+function theme_force_featured_image( $options ){
+	$options['post'] = array(
+		'width'  => 400,
+		'height' => 400,
+	);
+
+	return $options;
+}
+add_filter( 'force_featured_image_post_type', 'theme_force_featured_image' );
+```
 
 ## Screenshots ##
 
