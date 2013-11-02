@@ -15,8 +15,8 @@ Ever wanted to force a user to publish a post with a featured image of a certain
 
 == Configuration ==
 
-This plugin lets you specify which post-type requires to force a featured image to. It will also let you specify minimum dimensions for the image.`
-Let say for example you want to force a user to set an image on the default post type with the following dimensions (400px * 400px):
+This plugin lets you specify which post-type requires to force a featured image to. It will also let you specify minimum dimensions for the image.
+Let's say for example you want to force a user to set an image on the default post type with the following dimensions (400px * 400px):
 
 ```php
 function theme_force_featured_image( $options ){
