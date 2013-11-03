@@ -20,7 +20,7 @@ Ever wanted to force a user to publish a post with a featured image of a certain
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. This plugin lets you specify which post-type requires to force a featured image to. It will also let you specify minimum dimensions for the image.
 Let's say, for example, you want to force a user to set an image on the default post type with the following dimensions (400px * 400px). Put this code in the function.php of your theme :
-
+```
 	function theme_force_featured_image( $options ){
 		$options['post'] = array(
 			'width'  => 400,
@@ -30,7 +30,7 @@ Let's say, for example, you want to force a user to set an image on the default 
 		return $options;
 	}
 	add_filter( 'force_featured_image_post_type', 'theme_force_featured_image' );
-
+```
 ## Screenshots ##
 
 ### The plugin shows the user a warning when he doesn't respect the image dimension
