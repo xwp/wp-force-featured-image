@@ -38,8 +38,8 @@ Let's say, for example, you want to force a user to set an image on the default 
 
 == Changelog ==
 
-= 0.2 =
+= 0.2.0 =
 * Add the ability to force a featured image with dimensions
 
-= 0.1 =
+= 0.1.0 =
 First Release
