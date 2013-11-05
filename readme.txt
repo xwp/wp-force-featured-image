@@ -1,5 +1,5 @@
 === Force Featured Image ===
-Contributors:      x-team, jonathanbardo
+Contributors:      x-team, jonathanbardo, westonruter
 Tags:              tinyMCE, admin, image, featured-image, featured
 Requires at least: 3.5
 Tested up to:      3.7.1
