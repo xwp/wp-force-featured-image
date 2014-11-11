@@ -1,17 +1,17 @@
 <?php
 /**
  * Plugin Name: Force Featured Image
- * Plugin URI: http://x-team.com
+ * Plugin URI: https://xwp.co
  * Description: Force certain post types to be published with a featured image and a certain dimension if specified
  * Version: 0.2.0
- * Author: X-Team, Jonathan Bardo
- * Author URI: http://x-team.com/wordpress/
+ * Author: XWP, Jonathan Bardo
+ * Author URI: https://xwp.co/
  * Text Domain: force-featured-image
  * Domain Path: /languages
  */
 
 /**
- * Copyright (c) 2013 X-Team (http://x-team.com)
+ * Copyright (c) 2013 XWP (https://xwp.co)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at

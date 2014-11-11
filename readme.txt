@@ -1,5 +1,5 @@
 === Force Featured Image ===
-Contributors:      x-team, jonathanbardo, westonruter
+Contributors:      xwp, jonathanbardo, westonruter
 Tags:              tinyMCE, admin, image, featured-image, featured
 Requires at least: 3.5
 Tested up to:      3.7.1
@@ -11,7 +11,7 @@ Ever wanted to force a user to publish a post with a featured image of a certain
 
 == Description ==
 
-**Development of this plugin is done [on GitHub](https://github.com/x-team/wp-force-featured-image). Pull requests welcome. Please see [issues](https://github.com/x-team/wp-force-featured-image/issues) reported there before going to the plugin forum.**
+**Development of this plugin is done [on GitHub](https://github.com/xwp/wp-force-featured-image). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-force-featured-image/issues) reported there before going to the plugin forum.**
 
 == Installation ==
 
