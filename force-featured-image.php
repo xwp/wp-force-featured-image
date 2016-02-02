@@ -164,7 +164,7 @@ class Force_Featured_Image {
 		switch ( $msg_id ) {
 			case 'wrong-size' :
 				$dimension = sprintf( '<strong>%spx X %spx</strong>', self::$options['post_types'][$post->post_type]['width'], self::$options['post_types'][$post->post_type]['height'] );
-				$msg = __( "This post <strong>featured image doesn't respect the image dimention</strong>. Please add an image with the following dimension : ", 'force-featured-image' ) . $dimension;
+				$msg = __( "This post <strong>featured image doesn't respect the image dimension</strong>. Please add an image with the following dimension : ", 'force-featured-image' ) . $dimension;
 				break;
 			case 'no-image':
 				$msg = __( "This post <strong>doesn't have a featured image</strong>. Please add an image before publishing.", 'force-featured-image' );
