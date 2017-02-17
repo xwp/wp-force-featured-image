@@ -1,17 +1,17 @@
 <?php
 /**
- * Plugin Name: Force Featured Image
- * Plugin URI: http://x-team.com
+ * Plugin Name: WPF Force Featured Image
+ * Plugin URI: https://wpfunctions.freesite.host
  * Description: Force certain post types to be published with a featured image and a certain dimension if specified
  * Version: 0.2.0
- * Author: X-Team, Jonathan Bardo
- * Author URI: http://x-team.com/wordpress/
- * Text Domain: force-featured-image
+ * Author: WP Functions, Wajiha Rizvi
+ * Author URI: https://github.com/wajiharizvi001
+ * Text Domain: wpf-force-featured-image
  * Domain Path: /languages
  */
 
 /**
- * Copyright (c) 2013 X-Team (http://x-team.com)
+ * Copyright (c) 2017 WP Functions (https://wpfunctions.freesite.host)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at
@@ -28,7 +28,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-class Force_Featured_Image {
+class WPF_Force_Featured_Image {
 
 	/**
 	 * Flag to indicate if dependencies are satisfied.
@@ -51,7 +51,7 @@ class Force_Featured_Image {
 	/**
 	 * Constructor.
 	 *
-	 * @return \Force_Featured_Image
+	 * @return \WPF_Force_Featured_Image
 	 */
 	public function __construct() {
 		// Internationalize the text strings used.
@@ -68,11 +68,11 @@ class Force_Featured_Image {
 	 */
 	public function i18n() {
 		// Load the translation of the plugin
-		load_plugin_textdomain( 'force-featured-image', false, 'force-featured-image/languages' );
+		load_plugin_textdomain( 'wpf-force-featured-image', false, 'wpf-force-featured-image/languages' );
 	}
 
 	/**
-	 * Add actions after setup themes so function.php in the theme could add force_featured_image_post_type filter
+	 * Add actions after setup themes so function.php in the theme could add wpf_force_featured_image_post_type filter
 	 *
 	 * @action after_setup_theme
 	 *
@@ -80,7 +80,7 @@ class Force_Featured_Image {
 	 */
 	public function after_setup_theme() {
 		// Let the theme override some options
-		self::$options['post_types'] = apply_filters( 'force_featured_image_post_type', self::$options['post_types'] );
+		self::$options['post_types'] = apply_filters( 'wpf_force_featured_image_post_type', self::$options['post_types'] );
 
 		// If no post-types are specified in the options, no use to go further
 		if ( empty( self::$options['post_types'] ) )
@@ -190,7 +190,7 @@ class Force_Featured_Image {
 	 */
 	public function add_notice_query_var( $location ) {
 		remove_filter( 'redirect_post_location', array( $this, 'add_notice_query_var' ), 99 );
-		return add_query_arg( array( 'force-featured-image' => self::$admin_message, 'message' => 10 ), $location );
+		return add_query_arg( array( 'wpf-force-featured-image' => self::$admin_message, 'message' => 10 ), $location );
 	}
 
 	/**
@@ -268,4 +268,4 @@ class Force_Featured_Image {
 
 }
 
-$GLOBALS['force_featured_image'] = new Force_Featured_Image();
+$GLOBALS['wpf_force_featured_image'] = new WPF_Force_Featured_Image();

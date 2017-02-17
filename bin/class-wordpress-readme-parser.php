@@ -4,8 +4,8 @@
  * The WordPress-Plugin-Readme-Parser project is too heavy and has too many dependencies for what we need (we don't need conversion to HTML)
  * @link https://github.com/markjaquith/WordPress-Plugin-Readme-Parser Alternative to WordPress-Plugin-Readme-Parser
  * @version 1.1.1
- * @author Weston Ruter <weston@x-team.com> (@westonruter)
- * @copyright Copyright (c) 2013, X-Team <http://x-team.com/wordpress/>
+ * @author Wajiha Rizvi <jiyarizvi18@gmail.com> (@wajiharizvi001)
+ * @copyright Copyright (c) 2017, WP Functions <https://wpfunctions.freesite.host/>
  * @license GPLv2+
  */
 

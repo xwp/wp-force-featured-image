@@ -1,8 +1,7 @@
-=== Force Featured Image ===
-Contributors:      x-team, jonathanbardo, westonruter
+=== Force Featured Image ===      
 Tags:              tinyMCE, admin, image, featured-image, featured
-Requires at least: 3.5
-Tested up to:      3.7.1
+Requires at least: 4.1
+Tested up to:      4.7.2
 Stable tag:        trunk
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,17 +10,17 @@ Ever wanted to force a user to publish a post with a featured image of a certain
 
 == Description ==
 
-**Development of this plugin is done [on GitHub](https://github.com/x-team/wp-force-featured-image). Pull requests welcome. Please see [issues](https://github.com/x-team/wp-force-featured-image/issues) reported there before going to the plugin forum.**
+**Development of this plugin is done [on GitHub](https://github.com/wajiharizvi001/wpf-force-featured-image). Pull requests welcome. Please see [issues](https://github.com/wajiharizvi001/wpf-force-featured-image/issues) reported there before going to the plugin forum.**
 
 == Installation ==
 
-1. Upload `force-featured-image` to the `/wp-content/plugins/` directory
+1. Upload `wpf-force-featured-image` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. This plugin lets you specify which post-type requires to force a featured image to. It will also let you specify minimum dimensions for the image.
 Let's say, for example, you want to force a user to set an image on the default post type with the following dimensions (400px * 400px). Put this code in the function.php of your theme :
 
 `
-	function theme_force_featured_image( $options ){
+	function theme_wpf_force_featured_image( $options ){
 		$options['post'] = array(
 			'width'  => 400,
 			'height' => 400,
@@ -29,7 +28,7 @@ Let's say, for example, you want to force a user to set an image on the default 
 
 		return $options;
 	}
-	add_filter( 'force_featured_image_post_type', 'theme_force_featured_image' );
+	add_filter( 'wpf_force_featured_image_post_type', 'theme_force_featured_image' );
 `
 
 == Screenshots ==
