@@ -3,8 +3,8 @@
 /**
  * Look for WordPress readme in current directory or above and convert into markdown readme in same directory
  * @version 1.0.1
- * @author Weston Ruter <weston@x-team.com> (@westonruter)
- * @copyright Copyright (c) 2013, X-Team <http://x-team.com/wordpress/>
+ * @author Wajiha Rizvi <jiyarizvi18@gmail.com> (@wajiharizvi001)
+ * @copyright Copyright (c) 2017, WP Functions <https://wpfunctions.freesite.host/>
  * @license GPLv2+
  */
 
